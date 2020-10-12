@@ -2,10 +2,35 @@ import React, { useState } from 'react'
 import styled, { keyframes } from 'styled-components'
 
 
-
 const WeaponCard = styled.div`
     display: ${pr => pr.theme.display.display};
+    flex-direction: ${pr => pr.theme.display.flexdirection};
+    text-align:  ${pr => pr.theme.display.center};
+    background:  ${pr => pr.theme.colors.background};
+    color:  ${pr => pr.theme.colors.text};
+    border: ${pr => pr.theme.border.style} ${pr => pr.theme.border.size} ${pr => pr.theme.colors.primary};
+    border-radius:  ${pr => pr.theme.border.rounded};
+    width: 20%;
+`
+const WeaponHeader = styled.div`
+    display: ${pr => pr.theme.display.display};
     font-size: ${pr => pr.theme.text.size.DesktopAvg};
+    border-bottom: ${pr => pr.theme.border.style} ${pr => pr.theme.border.size} ${pr => pr.theme.colors.primary};
+`
+const WeaponBrand = styled.div`
+    border-bottom: ${pr => pr.theme.border.style} ${pr => pr.theme.border.size} ${pr => pr.theme.colors.primary};
+`
+
+const WeaponBody = styled.div`
+    border-bottom: ${pr => pr.theme.border.style} ${pr => pr.theme.border.size} ${pr => pr.theme.colors.primary};
+`
+
+const WeaponCurse = styled.div`
+    border-bottom: ${pr => pr.theme.border.style} ${pr => pr.theme.border.size} ${pr => pr.theme.colors.primary};
+`
+
+const WeaponCost = styled.div`
+
 `
 
 
@@ -19,15 +44,30 @@ const indexKey = [Math.floor(Math.random() * props.weaponData.length)]
 
        return ( 
         <WeaponCard>
-            <h1>Weapon: {props.weaponData[indexKey].name}</h1>
-            <p>Type: {props.weaponData[indexKey].size} {props.weaponData[indexKey].type}</p>
-            <p>Damage: {props.weaponData[indexKey].damage} {props.weaponData[indexKey].damageType}</p>
-            <p>Ammunition: {props.weaponData[indexKey].ammunition}</p>
-            <p>Conversion: {props.weaponData[indexKey].conversion}</p>
-            <p>Attributes: {props.weaponData[indexKey].details}</p>
-            <p>{props.weaponData[indexKey].misc}</p>
-            <p>Weight: {props.weaponData[indexKey].weight} lbs</p>
-            <p>Cost: {props.weaponData[indexKey].cost}</p>
+            <WeaponHeader>
+                <h2>{props.weaponData[indexKey].name}</h2>
+            </WeaponHeader>
+            <WeaponBrand>
+            <p>Echroel.</p>
+            </WeaponBrand>
+            <WeaponBody>
+                <p>Type: {props.weaponData[indexKey].size} {props.weaponData[indexKey].type}</p>
+                <p>Damage: {props.weaponData[indexKey].damage} {props.weaponData[indexKey].damageType}</p>
+                <p>Ammunition: {props.weaponData[indexKey].ammunition}</p>
+                <h3>Attributes:</h3>
+                <p>{props.weaponData[indexKey].details}</p>
+                <p>{props.weaponData[indexKey].conversion}</p>
+                <p>{props.weaponData[indexKey].misc}</p>
+                <p>{props.weaponData[indexKey].weight} lbs</p>
+            </WeaponBody>
+            <WeaponCurse>
+                <h3>Curse of Named.</h3>
+                <p>This curse pastes Lorem Ipsum. This curse pastes Lorem Ipsum. This curse pastes Lorem Ipsum. This curse pastes Lorem Ipsum.</p>
+            </WeaponCurse>
+            <WeaponCost>
+            <img src='../' alt='golden coin'/>
+                <p>{props.weaponData[indexKey].cost}</p>
+            </WeaponCost>
         </WeaponCard>
        )
 }

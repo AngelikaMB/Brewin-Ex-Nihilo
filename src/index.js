@@ -7,10 +7,10 @@ import { ThemeProvider } from 'styled-components'
 import Theme from '../src/Theme/Theme'
 
 ReactDOM.render (
-
+/* <Router> */
 <ThemeProvider theme={Theme}>
 <App /> 
 </ThemeProvider>
-
+/* </Router> */
 , document.getElementById('root')
 );

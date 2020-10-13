@@ -1,10 +1,12 @@
 import React, { useState } from 'react'
 import styled, { keyframes } from 'styled-components'
+import GoldCoin from '../../Assets/Goldencoin.svg'
+import CurrencyConv from '../Constants/CurrencyConv'
 
 
 const WeaponCard = styled.div`
     display: ${pr => pr.theme.display.display};
-    flex-direction: ${pr => pr.theme.display.flexdirection};
+    flex-direction: ${pr => pr.theme.display.flexCol};
     text-align:  ${pr => pr.theme.display.center};
     background:  ${pr => pr.theme.colors.background};
     color:  ${pr => pr.theme.colors.text};
@@ -30,13 +32,12 @@ const WeaponCurse = styled.div`
 `
 
 const WeaponCost = styled.div`
+    display: ${pr => pr.theme.display.disInlineFlex};
+    width: 20%;
+    justify-content: space-between;
 
 `
-
-
 export default function WeaponGen(props) {
-
-const {weaponData} = props
 
 const [weapon, setWeapon] = useState({})
 
@@ -65,7 +66,7 @@ const indexKey = [Math.floor(Math.random() * props.weaponData.length)]
                 <p>This curse pastes Lorem Ipsum. This curse pastes Lorem Ipsum. This curse pastes Lorem Ipsum. This curse pastes Lorem Ipsum.</p>
             </WeaponCurse>
             <WeaponCost>
-            <img src='../' alt='golden coin'/>
+            <GoldCoin width={30} height={30} alt='golden coin' />
                 <p>{props.weaponData[indexKey].cost}</p>
             </WeaponCost>
         </WeaponCard>

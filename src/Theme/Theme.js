@@ -1,9 +1,12 @@
 export default {
     display: {
         disFlex: 'flex',
-        flexdirection: 'column',
+        disInlineFlex: 'inline-flex',
+        flexCol: 'column',
+        flexRow: 'row',
         center: 'center',
         flexwrap: 'wrap',
+        space: 'space-around',
     },
 
 

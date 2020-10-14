@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import styled, { keyframes } from 'styled-components'
 import GoldCoin from '../../Assets/Goldencoin.svg'
-import CurrencyConv from '../Constants/CurrencyConv'
+import CurrencyConvert from '../Constants/CurrencyConv'
 
 
 const WeaponCard = styled.div`

@@ -39,27 +39,34 @@ const WeaponCost = styled.div`
 `
 export default function WeaponGen(props) {
 
+    const { weaponData} = props;
+
 const [weapon, setWeapon] = useState({})
 
-const indexKey = [Math.floor(Math.random() * props.weaponData.length)]
+
+
+// const pickWeapon = weaponData.find(weapon => {
+//     return setWeapon(weapon === indexKey)
+// })
+
 
        return ( 
         <WeaponCard>
             <WeaponHeader>
-                <h2>{props.weaponData[indexKey].name}</h2>
+                <h2>{weaponData.name}</h2>
             </WeaponHeader>
             <WeaponBrand>
             <p>Echroel.</p>
             </WeaponBrand>
             <WeaponBody>
-                <p>Type: {props.weaponData[indexKey].size} {props.weaponData[indexKey].type}</p>
-                <p>Damage: {props.weaponData[indexKey].damage} {props.weaponData[indexKey].damageType}</p>
-                <p>Ammunition: {props.weaponData[indexKey].ammunition}</p>
+                <p>Type: {weaponData.size} {weaponData.type}</p>
+                <p>Damage: {weaponData.damage} {weaponData.damageType}</p>
+                <p>Ammunition: {weaponData.ammunition}</p>
                 <h3>Attributes:</h3>
-                <p>{props.weaponData[indexKey].details}</p>
-                <p>{props.weaponData[indexKey].conversion}</p>
-                <p>{props.weaponData[indexKey].misc}</p>
-                <p>{props.weaponData[indexKey].weight} lbs</p>
+                <p>{weaponData.details}</p>
+                <p>{weaponData.conversion}</p>
+                <p>{weaponData.misc}</p>
+                <p>{weaponData.weight} lbs</p>
             </WeaponBody>
             <WeaponCurse>
                 <h3>Curse of Named.</h3>
@@ -67,7 +74,7 @@ const indexKey = [Math.floor(Math.random() * props.weaponData.length)]
             </WeaponCurse>
             <WeaponCost>
             <GoldCoin width={30} height={30} alt='golden coin' />
-                <p>{props.weaponData[indexKey].cost}</p>
+                <p>{weaponData.cost}</p>
             </WeaponCost>
         </WeaponCard>
        )

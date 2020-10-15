@@ -1,28 +1,15 @@
-import React from 'react';
-
-
+import React, { useState } from 'react';
 
 
 export default function CurrencyConvert(props) {
-const money = 2347819
+const [prices, setPrice] = useState({})
 
-    function Convertor(money) {
-        const amt = money
-        const amount = money
-
-
+const { price } = props
 
         // const plat = ((amount, sum) => {
         // return (amount - sum) / 1000;
         // })
 
-    }
-        return (
-            <div> </div>
-        )
-
-        Convertor(money);
-}
 
 
         const money = 2347819
@@ -38,6 +25,11 @@ const money = 2347819
         const remainder = sum(amt)
         console.log(remainder)
 
+        return (
+            <div> </div>
+        )
+
+}
 /*
 
 #AMT / 1000

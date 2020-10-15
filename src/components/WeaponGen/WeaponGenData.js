@@ -1,5 +1,6 @@
 export default [
     {
+        'id': 1,
         'name': 'Short Sword',
         'size': '',
         'type': 'Melee',
@@ -15,6 +16,7 @@ export default [
         'cost': 1000
     },
         {
+        'id': 2,
         'name': 'Long Sword',
         'size': '1h/2h',
         'type': 'Melee',
@@ -30,6 +32,7 @@ export default [
         'cost': 1500
     },
         {
+        'id': 3,
         'name': 'Light Crossbow',
         'size': '2h',
         'type': 'Ranged',
@@ -45,6 +48,7 @@ export default [
         'cost': 2500
     },
         {
+        'id': 4,
         'name': 'Hand Crossbow',
         'size': '',
         'type': 'Ranged',
@@ -60,6 +64,7 @@ export default [
         'cost': 7500
     },
         {
+        'id': 5,
         'name': 'Heavy Crossbow',
         'size': '2h',
         'type': 'Ranged',
@@ -75,6 +80,7 @@ export default [
         'cost': 5000
     },
         {
+        'id': 6,
         'name': 'Long Bow',
         'size': '2h',
         'type': 'Ranged',
@@ -90,6 +96,7 @@ export default [
         'cost': 5000
     },
         {
+        'id': 7,
         'name': 'Short Bow',
         'size': '2h',
         'type': 'Ranged',
@@ -105,6 +112,7 @@ export default [
         'cost': 2500
     },
         {
+        'id': 8,
         'name': 'Mace',
         'size': '',
         'type': 'Melee',
@@ -120,6 +128,7 @@ export default [
         'cost': 1000
     },
         {
+        'id': 9,
         'name': 'Cane',
         'size': '1h/2h',
         'type': 'Melee',
@@ -135,6 +144,7 @@ export default [
         'cost': 1000
     },
         {
+        'id': 10,
         'name': 'Flail',
         'size': '',
         'type': 'Melee',
@@ -150,6 +160,7 @@ export default [
         'cost': 1500
     },
         {
+        'id': 11,
         'name': 'Morningstar',
         'size': '',
         'type': 'Melee',
@@ -165,6 +176,7 @@ export default [
         'cost': 1500
     },
         {
+        'id': 12,
         'name': 'Rapier',
         'size': '',
         'type': 'Melee',
@@ -180,6 +192,7 @@ export default [
         'cost': 2500
     },
         {
+        'id': 13,
         'name': 'Bastard Sword',
         'size': '1h/2h',
         'type': 'Melee',
@@ -195,6 +208,7 @@ export default [
         'cost': 2500
     },
         {
+        'id': 14,
         'name': 'Knuckle Dusters',
         'size': '',
         'type': 'Melee',
@@ -210,6 +224,7 @@ export default [
         'cost': 1000    
         },
             {
+        'id': 15,
         'name': 'Clawed Knuckle Dusters',
         'size': '',
         'type': 'Melee',
@@ -225,6 +240,7 @@ export default [
         'cost': 2000
     },
         {
+        'id': 16,
         'name': 'Great Axe',
         'size': '2h',
         'type': 'Melee',
@@ -240,6 +256,7 @@ export default [
         'cost': 3000
     },
         {
+        'id': 17,
         'name': 'Hand Axe',
         'size': '',
         'type': 'Melee',
@@ -255,6 +272,7 @@ export default [
         'cost': 500
     },
         {
+        'id': 18,
         'name': 'Halberd',
         'size': '2h',
         'type': 'Melee',
@@ -270,6 +288,7 @@ export default [
         'cost': 2000
     },
         {
+        'id': 19,
         'name': 'Polearm',
         'size': '2h',
         'type': 'Melee',
@@ -285,6 +304,7 @@ export default [
         'cost': 1500
     },
         {
+        'id': 20,
         'name': 'Dagger',
         'size': '',
         'type': 'Melee',
@@ -300,6 +320,7 @@ export default [
         'cost': 200
     },
         {
+        'id': 21,
         'name': 'Kris',
         'size': '',
         'type': 'Melee',
@@ -315,6 +336,7 @@ export default [
         'cost': 500
     },
         {
+        'id': 22,
         'name': 'Whip',
         'size': '',
         'type': 'Melee',
@@ -330,6 +352,7 @@ export default [
         'cost': 200
     },
         {
+        'id': 23,
         'name': 'Sickle',
         'size': '',
         'type': 'Melee',
@@ -345,6 +368,7 @@ export default [
         'cost': 100
     },
         {
+        'id': 24,
         'name': 'Light Hammer',
         'size': '',
         'type': 'Melee',
@@ -360,6 +384,7 @@ export default [
         'cost': 200
     },
         {
+        'id': 25,
         'name': 'Warhammer',
         'size': '1h/2h',
         'type': 'Melee',
@@ -375,6 +400,7 @@ export default [
         'cost': 1500
     },
         {
+        'id': 26,
         'name': 'Net',
         'size': '',
         'type': 'Thrown',
@@ -390,6 +416,7 @@ export default [
         'cost': 100
     },
         {
+        'id': 27,
         'name': 'Hook',
         'size': '',
         'type': 'Melee',
@@ -405,6 +432,7 @@ export default [
         'cost': 500
     },
         {
+        'id': 28,
         'name': 'Spear',
         'size': '1h/2h',
         'type': 'Melee',
@@ -420,6 +448,7 @@ export default [
         'cost': 100
     },
         {
+        'id': 29,
         'name': 'Javelin',
         'size': '',
         'type': 'Melee',
@@ -435,6 +464,7 @@ export default [
         'cost': 50
     },
         {
+        'id': 30,
         'name': 'Club',
         'size': '',
         'type': 'Melee',
@@ -450,6 +480,7 @@ export default [
         'cost': 50
     },
         {
+        'id': 31,
         'name': 'Glaive',
         'size': '2h',
         'type': 'Melee',
@@ -465,6 +496,7 @@ export default [
         'cost': 2000
     },
         {
+        'id': 32,
         'name': 'Quarter Staff',
         'size': '1h/2h',
         'type': 'Melee',
@@ -480,6 +512,7 @@ export default [
         'cost': 20
     },
         {
+        'id': 33,
         'name': 'Lance',
         'size': '',
         'type': 'Melee',
@@ -495,6 +528,7 @@ export default [
         'cost': 1000
     },
         {
+        'id': 34,
         'name': 'Maul',
         'size': '2h',
         'type': 'Melee',
@@ -510,6 +544,7 @@ export default [
         'cost': 1000
     },
         {
+        'id': 35,
         'name': 'Pike',
         'size': '2h',
         'type': 'Melee',
@@ -525,6 +560,7 @@ export default [
         'cost': 500
     },
         {
+        'id': 36,
         'name': 'Scimitar',
         'size': '',
         'type': 'Melee',
@@ -540,6 +576,7 @@ export default [
         'cost': 2500
     },
         {
+        'id': 37,
         'name': 'Trident',
         'size': '1h/2h',
         'type': 'Melee',
@@ -555,6 +592,7 @@ export default [
         'cost': 500
     },
         {
+        'id': 38,
         'name': 'War Pick',
         'size': '',
         'type': 'Melee',
@@ -570,6 +608,7 @@ export default [
         'cost': 500
     },
         {
+        'id': 39,
         'name': 'Saber',
         'size': '',
         'type': 'Melee',
@@ -585,6 +624,7 @@ export default [
         'cost': 3500
     },
         {
+        'id': 40,
         'name': 'Claymore',
         'size': '2h',
         'type': 'Melee',
@@ -600,6 +640,7 @@ export default [
         'cost': 10000
     },
         {
+        'id': 41,
         'name': 'Cutlass',
         'size': '',
         'type': 'Melee',
@@ -615,6 +656,7 @@ export default [
         'cost': 1000
     },
         {
+        'id': 42,
         'name': 'Khopesh',
         'size': '1h/2h',
         'type': 'Melee',
@@ -630,6 +672,7 @@ export default [
         'cost': 2000
     },
         {
+        'id': 43,
         'name': 'Machete',
         'size': '',
         'type': 'Melee',
@@ -645,6 +688,7 @@ export default [
         'cost': 100
     },
         {
+        'id': 44,
         'name': 'Chakram',
         'size': '',
         'type': 'Melee',
@@ -660,6 +704,7 @@ export default [
         'cost': 800
     },
         {
+        'id': 45,
         'name': 'Blowgun',
         'size': '',
         'type': 'Ranged',
@@ -675,6 +720,7 @@ export default [
         'cost': 10
     },
         {
+        'id': 46,
         'name': 'Scythe',
         'size': '1h/2h',
         'type': 'Melee',
@@ -690,6 +736,7 @@ export default [
         'cost': 4000
     },
         {
+        'id': 47,
         'name': 'Sling',
         'size': '2h',
         'type': 'Ranged',

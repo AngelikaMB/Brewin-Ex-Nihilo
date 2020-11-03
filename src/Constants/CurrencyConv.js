@@ -1,8 +1,18 @@
 import React from 'react';
-import CurrencyDisplay from '../components/CurrencyDisplay';
+import GoldCoin from '../Assets/Goldencoin'
+import PlatCoin from '../Assets/platinumCoin'
+import SilvCoin from '../Assets/Silvercoin'
+import CopCoin from '../Assets/bronzecoin'
+import styled from 'styled-components'
+
+//Styles
+const CoinDisplay = styled.div`
+    display: ${pr => pr.theme.display.disFlex};
+    justify-content: space-around;
+    align-items: center;
+`
 
 export default function CurrencyConvert(props) {
-
 
 const { price } = props
 
@@ -31,5 +41,16 @@ copper = x % silvDiv
 
 conversion(price)
 
-        return <CurrencyDisplay plat={plat} gold={gold} silver={silver} copper={copper}/>
+    return (
+            <CoinDisplay>
+                <PlatCoin width={25} height={25} alt='platinum coin' />
+                <p>{plat}</p>
+                <GoldCoin width={25} height={25} alt='golden coin' />
+                <p>{gold}</p>
+                <SilvCoin width={25} height={25} alt='silver coin' />
+                <p>{silver}</p>
+                <CopCoin width={25} height={25} alt='golden coin' />
+                <p>{copper}</p>
+            </CoinDisplay>
+    )
 }

@@ -14,8 +14,7 @@ const indexKey = [Math.floor(Math.random() * weaponData.length)]
 return (
 
     <div>
-    <WeaponGenContainer weaponData={weaponData[indexKey]} currency={currency}/>
-    <CurrencyConvert price={weaponData[indexKey].cost} />
+    <WeaponGenContainer weaponData={weaponData[indexKey]} price={weaponData[indexKey].cost}/>
     </div>
     )
 }

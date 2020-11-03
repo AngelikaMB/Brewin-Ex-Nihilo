@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import styled, { keyframes } from 'styled-components'
-import CurrencyDis from '../CurrencyDisplay'
+import CurrencyDis from '../../Constants/CurrencyConv'
 
 //Styles
 const WeaponCard = styled.div`
@@ -32,7 +32,7 @@ const WeaponCurse = styled.div`
 
 export default function WeaponGen(props) {
 
-    const { weaponData } = props;
+    const { weaponData, price } = props;
 
 //Slices of state
 const [weapon, setWeapon] = useState({})
@@ -65,7 +65,7 @@ const [weapon, setWeapon] = useState({})
                 <h3>Curse of Named.</h3>
                 <p>This curse pastes Lorem Ipsum. This curse pastes Lorem Ipsum. This curse pastes Lorem Ipsum. This curse pastes Lorem Ipsum.</p>
             </WeaponCurse>
-            <CurrencyDis />
+            <CurrencyDis price={price}/>
         </WeaponCard>
        )
 }

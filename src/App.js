@@ -3,17 +3,18 @@ import React from 'react'
 import WeaponGenContainer from './Components/WeaponGen/WeaponGenContainer'
 import WeaponGeneratorMain from './components/WeaponGen/WeaponGenWrapper'
 import weaponData from './Components/WeaponGen/WeaponGenData'
-import CurrencyConv from './components/Constants/CurrencyConv'
-import axios from 'axios'
+import CurrencyConv from './Constants/CurrencyConv'
+
 
 
 export default function App() {
+
+
 return (
     <div className="app">
       <header className="app-header">
       <WeaponGeneratorMain weaponData={weaponData}/>
-      <CurrencyConv />
       </header>
     </div>
-)
+  )
 };

@@ -1,9 +1,8 @@
 import React, { useState } from 'react'
 import styled, { keyframes } from 'styled-components'
-import GoldCoin from '../../Assets/Goldencoin.svg'
-import CurrencyConvert from '../Constants/CurrencyConv'
+import CurrencyDisplay from '../CurrencyDisplay'
 
-
+//Styles
 const WeaponCard = styled.div`
     display: ${pr => pr.theme.display.display};
     flex-direction: ${pr => pr.theme.display.flexCol};
@@ -33,14 +32,15 @@ const WeaponCurse = styled.div`
 
 const WeaponCost = styled.div`
     display: ${pr => pr.theme.display.disInlineFlex};
-    width: 20%;
     justify-content: space-between;
+    align-items: center;
 
 `
 export default function WeaponGen(props) {
 
     const { weaponData} = props;
 
+//Slices of state
 const [weapon, setWeapon] = useState({})
 
 
@@ -61,7 +61,9 @@ const [weapon, setWeapon] = useState({})
             <WeaponBody>
                 <p>Type: {weaponData.size} {weaponData.type}</p>
                 <p>Damage: {weaponData.damage} {weaponData.damageType}</p>
+                {weaponData.ammunition ?
                 <p>Ammunition: {weaponData.ammunition}</p>
+                : ''}
                 <h3>Attributes:</h3>
                 <p>{weaponData.details}</p>
                 <p>{weaponData.conversion}</p>
@@ -72,10 +74,7 @@ const [weapon, setWeapon] = useState({})
                 <h3>Curse of Named.</h3>
                 <p>This curse pastes Lorem Ipsum. This curse pastes Lorem Ipsum. This curse pastes Lorem Ipsum. This curse pastes Lorem Ipsum.</p>
             </WeaponCurse>
-            <WeaponCost>
-            <GoldCoin width={30} height={30} alt='golden coin' />
-                <p>{weaponData.cost}</p>
-            </WeaponCost>
+            <CurrencyDisplay />
         </WeaponCard>
        )
 }

@@ -1,22 +1,21 @@
 import React, { useState } from 'react'
-import styled, { keyframes } from 'styled-components'
-import data from './WeaponGenData'
+// import data from './WeaponGenData'
 import WeaponGenContainer from './WeaponGenContainer'
 import CurrencyConvert from '../../Constants/CurrencyConv'
 
-const WeaponGeneratorMain = (props) => {
+export default function WeaponGeneratorMain(props) {
+
+const { currency, weaponData } = props
 
 //Random number to pull from weapon array
-const indexKey = [Math.floor(Math.random() * data.length)]
+const indexKey = [Math.floor(Math.random() * weaponData.length)]
 
 
 return (
 
     <div>
-    <WeaponGenContainer weaponData={data[indexKey]}/>
-    <CurrencyConvert price={data[indexKey].cost} />
+    <WeaponGenContainer weaponData={weaponData[indexKey]} currency={currency}/>
+    <CurrencyConvert price={weaponData[indexKey].cost} />
     </div>
     )
 }
-
-export default WeaponGeneratorMain

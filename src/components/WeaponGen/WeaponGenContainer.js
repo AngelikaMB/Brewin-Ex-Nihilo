@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import styled, { keyframes } from 'styled-components'
-import CurrencyDisplay from '../CurrencyDisplay'
+import CurrencyDis from '../CurrencyDisplay'
 
 //Styles
 const WeaponCard = styled.div`
@@ -30,25 +30,16 @@ const WeaponCurse = styled.div`
     border-bottom: ${pr => pr.theme.border.style} ${pr => pr.theme.border.size} ${pr => pr.theme.colors.primary};
 `
 
-const WeaponCost = styled.div`
-    display: ${pr => pr.theme.display.disInlineFlex};
-    justify-content: space-between;
-    align-items: center;
-
-`
 export default function WeaponGen(props) {
 
-    const { weaponData} = props;
+    const { weaponData } = props;
 
 //Slices of state
 const [weapon, setWeapon] = useState({})
 
-
-
 // const pickWeapon = weaponData.find(weapon => {
 //     return setWeapon(weapon === indexKey)
 // })
-
 
        return ( 
         <WeaponCard>
@@ -74,17 +65,7 @@ const [weapon, setWeapon] = useState({})
                 <h3>Curse of Named.</h3>
                 <p>This curse pastes Lorem Ipsum. This curse pastes Lorem Ipsum. This curse pastes Lorem Ipsum. This curse pastes Lorem Ipsum.</p>
             </WeaponCurse>
-            <CurrencyDisplay />
+            <CurrencyDis />
         </WeaponCard>
        )
 }
-/*
-I want to take
-weaponData.length and return a random number between 1 and length.
-
-That return will become the id of the object inside the array. 
-
-Display the matching object as a card with all of the given details filled out, taking into account any empty values.
-
-
-*/

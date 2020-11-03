@@ -9,7 +9,6 @@ export default {
         space: 'space-around',
     },
 
-
     colors: {
         primary: '#de9391',
         background: '#28343D',
@@ -18,7 +17,6 @@ export default {
         text: '#fcd1b5',
         secondary: '#96759a',
     },
-
 
     text: {
         size: {

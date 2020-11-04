@@ -58,6 +58,11 @@ function conversionDieNum(props) {
   return Function(`'use strict'; return (${props.weaponData.conversionNumOfDie}${props.brand.dieNumMod})`)()
 }
 
+//The net has a save DC to modify when Echroel. The string needs to be split, updated save DC inserted, string conatenated, and then returned.
+function saveDC(props) {
+  return Function(`'use strict'; return (${props.weaponData.saveDC}${props.brand.saveDC})`)()
+}
+
 
 // })
 
@@ -77,9 +82,8 @@ Kindred = Roll on the brand table again, anything but Kindred. Do not display th
             </WeaponBrand>
             : ''}
             <WeaponBody>
-                <p>Type: {weaponData.size} {weaponData.type}</p>
-                {weaponData.damage ? <p>Damage: {weaponData.damage} {weaponData.damageType}</p> : ''}
-                {weaponData.numOfDie ? <p>Damage: {dieNum(props)}d{dieSize(props)} {weaponData.damageType}</p> : ''}
+                <p>{weaponData.size} {weaponData.proficiency} {weaponData.type}</p>
+                {weaponData.damage ? <p>Damage: {weaponData.damage} {weaponData.damageType}</p> : <p>Damage: {dieNum(props)}d{dieSize(props)} {weaponData.damageType}</p>}
                 {weaponData.conversionNumOfDie ? 
                 <p>{weaponData.conversion} {conversionDieNum(props)}d{conversionDieSize(props)} {weaponData.damageType} </p>
                 : ''}
@@ -88,6 +92,7 @@ Kindred = Roll on the brand table again, anything but Kindred. Do not display th
                 : ''}
                 <h3>Attributes:</h3>
                 <p>{weaponData.details}</p>
+                {weaponData.range ? <p>Range: {weaponData.range}</p> : ''}
                 <p>{weaponData.misc}</p>
                 <p>{weaponData.weight} lbs</p>
             </WeaponBody>

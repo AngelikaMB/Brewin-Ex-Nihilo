@@ -38,6 +38,7 @@ export default {
 
 
      padding: {
+         none: '0',
          small: '5%',
      },
 

@@ -32,7 +32,7 @@ const WeaponCurse = styled.div`
 
 export default function WeaponGen(props) {
 
-    const { weaponData, price } = props;
+    const { weaponData, price, brand } = props;
 
 //Slices of state
 const [weapon, setWeapon] = useState({})
@@ -46,18 +46,24 @@ const [weapon, setWeapon] = useState({})
             <WeaponHeader>
                 <h2>{weaponData.name}</h2>
             </WeaponHeader>
+            {brand ? 
             <WeaponBrand>
-            <p>Echroel.</p>
+            <p>{brand.name}</p>
             </WeaponBrand>
+            : ''}
             <WeaponBody>
                 <p>Type: {weaponData.size} {weaponData.type}</p>
-                <p>Damage: {weaponData.damage} {weaponData.damageType}</p>
+
+                {weaponData.damage ? <p>Damage: {weaponData.damage} {weaponData.damageType}</p> : ''}
+                {weaponData.numOfDie ? <p>Damage: {weaponData.numOfDie}d{weaponData.dieSize} {weaponData.damageType}</p> : ''}
+                {weaponData.conversionNumOfDie ? 
+                <p>{weaponData.conversion} {weaponData.conversionNumOfDie}d{weaponData.conversionDieSize} {weaponData.damageType} </p>
+                : ''}
                 {weaponData.ammunition ?
                 <p>Ammunition: {weaponData.ammunition}</p>
                 : ''}
                 <h3>Attributes:</h3>
                 <p>{weaponData.details}</p>
-                <p>{weaponData.conversion}</p>
                 <p>{weaponData.misc}</p>
                 <p>{weaponData.weight} lbs</p>
             </WeaponBody>
@@ -65,7 +71,7 @@ const [weapon, setWeapon] = useState({})
                 <h3>Curse of Named.</h3>
                 <p>This curse pastes Lorem Ipsum. This curse pastes Lorem Ipsum. This curse pastes Lorem Ipsum. This curse pastes Lorem Ipsum.</p>
             </WeaponCurse>
-            <CurrencyDis price={price}/>
+            <CurrencyDis price={price} brand={brand}/>
         </WeaponCard>
        )
 }

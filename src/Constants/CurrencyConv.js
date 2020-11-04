@@ -10,11 +10,12 @@ const CoinDisplay = styled.div`
     display: ${pr => pr.theme.display.disFlex};
     justify-content: space-around;
     align-items: center;
+    padding: ${pr => pr.theme.padding.none}, ${pr => pr.theme.padding.small};
 `
 
 export default function CurrencyConvert(props) {
 
-const { price } = props
+const { price, brand } = props
 
 let plat = 0
 let gold = 0
@@ -23,7 +24,7 @@ let copper = 0
 
 //Divides price by breakpoints and assigns value to individual const
 let conversion  = (price) => {
-const x = price
+const x = Math.ceil(price * brand.cost)
 const platDiv = 1000
 const goldDiv = 100
 const silvDiv = 10

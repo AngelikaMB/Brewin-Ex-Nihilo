@@ -39,6 +39,26 @@ const [weapon, setWeapon] = useState({})
 
 // const pickWeapon = weaponData.find(weapon => {
 //     return setWeapon(weapon === indexKey)
+
+
+
+function dieSize(props) {
+  return Function(`'use strict'; return (${props.weaponData.dieSize}${props.brand.dieSizeMod})`)()
+}
+
+function dieNum(props) {
+  return Function(`'use strict'; return (${props.weaponData.numOfDie}${props.brand.dieNumMod})`)()
+}
+
+function conversionDieSize(props) {
+  return Function(`'use strict'; return (${props.weaponData.conversionDieSize}${props.brand.dieSizeMod})`)()
+}
+
+function conversionDieNum(props) {
+  return Function(`'use strict'; return (${props.weaponData.conversionNumOfDie}${props.brand.dieNumMod})`)()
+}
+
+
 // })
 
        return ( 
@@ -49,15 +69,19 @@ const [weapon, setWeapon] = useState({})
             {brand ? 
             <WeaponBrand>
             <p>{brand.name}</p>
+
+{/* 
+Kindred = Roll on the brand table again, anything but Kindred. Do not display the name, but pull the modifiers except price which should remain as Kindred. */}
+
+
             </WeaponBrand>
             : ''}
             <WeaponBody>
                 <p>Type: {weaponData.size} {weaponData.type}</p>
-
                 {weaponData.damage ? <p>Damage: {weaponData.damage} {weaponData.damageType}</p> : ''}
-                {weaponData.numOfDie ? <p>Damage: {weaponData.numOfDie}d{weaponData.dieSize} {weaponData.damageType}</p> : ''}
+                {weaponData.numOfDie ? <p>Damage: {dieNum(props)}d{dieSize(props)} {weaponData.damageType}</p> : ''}
                 {weaponData.conversionNumOfDie ? 
-                <p>{weaponData.conversion} {weaponData.conversionNumOfDie}d{weaponData.conversionDieSize} {weaponData.damageType} </p>
+                <p>{weaponData.conversion} {conversionDieNum(props)}d{conversionDieSize(props)} {weaponData.damageType} </p>
                 : ''}
                 {weaponData.ammunition ?
                 <p>Ammunition: {weaponData.ammunition}</p>

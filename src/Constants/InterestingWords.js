@@ -53,5 +53,6 @@ export default [
     'book',
     'spell tome',
     'bowl',
-    'cauldron'
+    'cauldron',
+    'chalice'
 ]

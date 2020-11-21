@@ -58,7 +58,7 @@ export default [
     'furry',
     'planked',
     'spun',
-    'drunked',
+    'drunken',
     'divine',
     'burnt',
     'seven',

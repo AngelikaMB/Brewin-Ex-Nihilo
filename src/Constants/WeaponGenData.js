@@ -491,7 +491,7 @@ export default [
         'proficiency': 'Martial',
         'damageType': 'None',
         'range': '5/15',
-        'ammunition': '',
+        'ammunition': '', 
         'conversion': '',
         'details': 'Thrown, Special',
         'misc': 'A large or smaller creature hit by a net is Restrained until it is freed. A net has no effect on creatures that are formless, or creatures that are huge or larger. A creature can use its action to make a DC Strength check, freeing itself or another creature within its reach on a success. Dealing 5 slashing damage to the net (AC 10) also frees the creature without harming it, ending the effect and destroying the net. When you use an action, Bonus Action, or Reaction to attack with a net, you can make only one attack regardless of the number of attacks you can normally make.',

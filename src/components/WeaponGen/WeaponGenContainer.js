@@ -16,7 +16,9 @@ const WeaponCard = styled.div`
 `
 const WeaponHeader = styled.div`
     display: ${pr => pr.theme.display.display};
-    font-size: ${pr => pr.theme.text.size.DesktopAvg};
+    h2 {
+      font-weight: 300;
+    }
     border-bottom: ${pr => pr.theme.border.style} ${pr => pr.theme.border.size} ${pr => pr.theme.colors.primary};
 `
 const WeaponBrand = styled.div`

@@ -1,5 +1,9 @@
 export default [
-    'female',
-    'male',
-    'non-binary'
+    'Female',
+    'Male',
+    'Female',
+    'Male',
+    'Female',
+    'Male',
+    'Non-Binary'
 ]

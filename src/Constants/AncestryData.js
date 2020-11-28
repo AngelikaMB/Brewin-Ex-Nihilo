@@ -39,4 +39,8 @@ export default [
         'Type': 'Half-Angel',
         'Sub': 'False'
     },
+        {
+        'Type': 'Orc',
+        'Sub': 'False'
+    },
 ]

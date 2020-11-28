@@ -50,8 +50,6 @@ export default [
     'Thorn',
     'Firefly',
     'Glowstone',
-    'Book',
-    'Spell Tome',
     'Bowl',
     'Cauldron',
     'Chalice'

@@ -6,7 +6,7 @@ import GermanicConVow from '../../Constants/GermanicConVowel'
 import GermanicVowCon from '../../Constants/GermanicVowelCon'
 import GermanicDblCon from '../../Constants/GermanicDblCon'
 import GermanicDblVowel from '../../Constants/GermanicDblVowel'
-import GermanicConVowel from '../../Constants/GermanicConVowel'
+import Virtues from '../../Constants/Virtues'
 
 export default function NameGen() {
 
@@ -15,37 +15,36 @@ const racePick = Math.floor(Math.random() * Ancestry.length)
 //Pick a dataset by index.
 // const chosenAncestry = (Ancestry[racePick].Type)  <------------- BRING THIS BACK!! COMMENTED OUT FOR TESTING PURPOSES ONLY. -------------->
 
-//Individual Rule Sets
+//Rule Set Collections
 const germanicVowelCon = [GermanicVowel, GermanicCon]
 const germanicConVow = [GermanicConVow, GermanicVowCon]
 const germanicDblCon = [GermanicDblCon]
 const germanicDblVow = [GermanicDblVowel]
 const germanicEnd = [GermanicCon]
-const germanicAll = [germanicVowelCon, germanicConVow, germanicDblCon, germanicDblVow]
-//Rule Set Collections
 
+
+const germanicVow = [GermanicVowel, GermanicVowCon, GermanicDblVowel]
+const germanicCon = [GermanicCon, GermanicConVow, GermanicDblCon]
+const germanicAll = [germanicVowelCon, germanicConVow, germanicDblCon, germanicDblVow]
 
 
 // -------------------- Testing -----------------------
 
-const syllChoice = []
-const generatedFirstName = [' ']
+const generatedLastName = [' ']
 let pickArray;
 let pickArrayAll;
 let chosenArray;
 let chosenArrayAll;
-let sylSelector;
 let sylSelectorAll;
 let chosenSyll;
 let chosenSyllAll;
-let pickSyll;
 let pickSyllAll;
 
 
 function setGermanicAllPicker(array) {
             //randomizes based on parent.length
             pickArrayAll = Math.floor(Math.random() * array.length)
-            //randomizes based on child-parent array.length
+            //randomizes based on child-parent.length
             chosenArrayAll = Math.floor(Math.random() * array[pickArrayAll].length)
             //randomizes based on child array.length
             sylSelectorAll = Math.floor(Math.random() * array[chosenArrayAll].length)
@@ -54,7 +53,7 @@ function setGermanicAllPicker(array) {
             //randomizes based on syllable array.length
             pickSyllAll = Math.floor(Math.random() * chosenSyllAll.length)
             //pushes chosen syllable to name
-            return generatedFirstName.push(chosenSyllAll[pickSyllAll])
+            return generatedLastName.push(chosenSyllAll[pickSyllAll])
 }
 
 function setGermanicRulePicker(array) {
@@ -65,20 +64,8 @@ function setGermanicRulePicker(array) {
             //finalizes child array
             chosenSyll = array[pickArray][chosenArray]
             //pushes chosen syllable to name
-            return generatedFirstName.push(chosenSyll)
+            return generatedLastName.push(chosenSyll)
 }
-
-setGermanicRulePicker(germanicVowelCon)
-setGermanicRulePicker(germanicConVow)
-setGermanicAllPicker(germanicAll)
-setGermanicRulePicker(germanicVowelCon)
-setGermanicRulePicker(germanicEnd)
-
-// -------------------- Testing -----------------------
-
-
-
-// ------------- Titlecase Convertor ----------------
 
 function titleize(str) {
     let upper = true
@@ -95,43 +82,45 @@ function titleize(str) {
     return newStr
 }
 
-
-
 const chosenAncestry = 'Dragonborn'
 
-// function selectNamingConvention(){
+function selectNamingConvention(){
 
-// //Decide how many syllables are in this name
-// const dragonbornSyll = Math.floor(Math.random() * 2)
+//Decide how many syllables are in this name
+const dragonbornSyll = Math.ceil(Math.random() * 9)
 
-// //The number of construction insutrctions in any given name cannot be fewer than 1 or exceed 9 steps.
-// const numOfSyllArray = [0,1,2,3,4,5,6,7,8]
+//The number of construction insutrctions in any given name cannot be fewer than 1 or exceed 9 steps.
+const numOfSyllArray = [0,1,2,3,4,5,6,7,8]
 
-// // //Randomize which sound gets pulled from the selected syllables array
-// // const sylSelector = Math.floor(Math.random() * syllChoice.length)
+//For loop following greatest number of syllables possible.
+let i;
+for (i = 0; i < numOfSyllArray.length; i++) {
+    
+const vowels = /['aeiouAEIOU']/
 
+chosenAncestry === 'Dragonborn' ? 
+    dragonBornLastName() : ''
+function dragonBornLastName(){
+console.log(dragonbornSyll)
 
+function stepOne() {
+    i < dragonbornSyll ?
+    setGermanicRulePicker(germanicConVow) : ''
+    stepTwo
+}
+stepOne()
 
+const stepTwo = () => {
+    if (i < dragonbornSyll && generatedLastName.length-1 === vowels)
+    setGermanicRulePicker(germanicCon) 
+    if (i < dragonbornSyll && !generatedLastName.length-1 === vowels)
+     setGermanicRulePicker(germanicVow)
+    else (i >= dragonbornSyll)
+    (setGermanicRulePicker(germanicEnd))
+}
+}
+}
 
-
-
-
-
-// //compare the number of syllables to the step number of numOfSyllArray by iteration. Perform specified instructions on case-by-case basis.
-// //   if(chosenAncestry === 'Dragonborn'){
-// //       for (let i = 0; i < dragonbornSyll; i++) {
-// //       console.log(`This is i-->`, i)
-// //       console.log(`This is dragonbornSyll -->`, dragonbornSyll)
-// //             if (i === numOfSyllArray[0])
-// //                 namingSyllables.push(
-// //                     germanicVowelCon[Picker(germanicVowelCon)][Math.floor(Math.random() * (germanicVowelCon[Picker(germanicVowelCon)]).length)])
-// //                 generatedName.push(namingSyllables[SylSelector])
-// //             if (i < dragonbornSyll)
-// //                 return
-// //         }}
-
-//         // if(dragonbornSyll < 9) 
-      
 //     // else if(chosenAncestry === 'Elf')
 //     //     return subAncestryPick.push(
 //     //     `${ElfData[elfPick]}`,
@@ -152,15 +141,11 @@ const chosenAncestry = 'Dragonborn'
 //     // return subAncestryPick.push(
 //     // `${GnomeData[gnomePick]}`,
 //     // )
-     
-// }
-// selectNamingConvention();
+ }
 
-const capitalNames = generatedFirstName.toString().split(',').join('')
-console.log(capitalNames)
-// console.log(`This is the current step selection -->`, namingSyllables)
-// console.log(`This is the completed name -->`, generatedName)
+selectNamingConvention();
 
+const capitalNames = generatedLastName.toString().split(',').join('')
     return (
         <div>
         <p>Shopkeep: {titleize(capitalNames)}</p>

@@ -2,9 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 import Sword from '../../Assets/sword.svg'
 import BlacksmithShopNameGen from './BSShopNameGen'
-import NameGen from './NameGen'
-import AncestryGen from './AncestryGen'
-import Alignment from '../../Constants/AlignmentData'
+import ProfileGen from './ProfileGen'
+
 
 
 //Styles
@@ -44,10 +43,8 @@ const NPCNameDisplay = styled.div`
 
 export default function ShopKeepWrap(props) {
 
-    const { interestingWords, shopDesc, wordMod, Blacksmith, BlacksmithSuf, Ancestry } = props
+    const { interestingWords, shopDesc, wordMod, Blacksmith, BlacksmithSuf } = props
 
-const alignmentPick = Math.floor(Math.random() * Alignment.length)
-const chosenAlignment = Alignment[alignmentPick]
 
     return (
         <CardContainer>
@@ -58,9 +55,7 @@ const chosenAlignment = Alignment[alignmentPick]
                 <SwordDisplay><Sword height={35} width={35}/></SwordDisplay>
                 <NPCInfo>
                     <NPCNameDisplay>
-                        <NameGen />
-                        <AncestryGen Ancestry={Ancestry}/>
-                        <p>Generally considered {chosenAlignment.toLowerCase()}.</p>
+                        <ProfileGen/>
                     </NPCNameDisplay>
                 </NPCInfo>
             </ShopNameContainer>

@@ -4,7 +4,6 @@ import interestingWordMod from '../../Constants/InterestingWordMod'
 import shopDesc from '../../Constants/ShopDesc'
 import Blacksmith from '../../Constants/BlacksmithData'
 import BlacksmithSuf from '../../Constants/BlacksmithSufData'
-import Ancestry from '../../Constants/AncestryData'
 import weaponData from '../../Constants/WeaponGenData'
 import brandData from '../../Constants/BrandData'
 import ShopKeepWrap from './ShopKeepWrap'
@@ -32,7 +31,7 @@ export default function ShopGen () {
 return (
 
     <ShopGenLayout>
-    <ShopKeepWrap Ancestry={Ancestry} interestingWords={interestingWords} shopDesc={shopDesc} wordMod={interestingWordMod} Blacksmith={Blacksmith} BlacksmithSuf={BlacksmithSuf}/>
+    <ShopKeepWrap interestingWords={interestingWords} shopDesc={shopDesc} wordMod={interestingWordMod} Blacksmith={Blacksmith} BlacksmithSuf={BlacksmithSuf}/>
     <WeaponGeneratorMain weaponData={weaponData} brandData={brandData}/>
     </ShopGenLayout>
     )

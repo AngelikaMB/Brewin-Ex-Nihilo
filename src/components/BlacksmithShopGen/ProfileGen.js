@@ -2,14 +2,15 @@ import React from 'react'
 import ChromaticData from '../../Constants/ChromaticData'
 import MetallicData from '../../Constants/MetallicData'
 import ElfData from '../../Constants/ElfData'
-import Ancestry from '../../Constants/AncestryData'
+import Ancestry from '../../Constants/Ancestry'
 import DwarfData from '../../Constants/DwarfData'
 import HalflingData from '../../Constants/HalflingData'
 import GnomeData from '../../Constants/GnomeData'
-
+import NameGen from '../../Constants/NameGen'
 import Sex from '../../Constants/SexData'
+import Alignment from '../../Constants/AlignmentData'
 
-export default function AncestryGen() {
+export default function profileGen() {
 
 const subAncestryPick = []
 
@@ -63,10 +64,14 @@ const chosenSubAncestry = subAncestryPick[subAncestrySelector]
 //pick sex from dataset.
 const chosenSex = Sex[sexPick]
 
+//pick alignment from dataset
+    const alignmentPick = Math.floor(Math.random() * Alignment.length)
+    const chosenAlignment = Alignment[alignmentPick]
+
 
     return (
         <div>
-            {chosenSubAncestry === [] ? <p>{chosenSex} {chosenAncestry}</p> : <p>{chosenSex} {chosenSubAncestry} {chosenAncestry}</p>}
+            <NameGen ancestry={chosenAncestry} subAncestry={chosenSubAncestry} sex={chosenSex} alignment={chosenAlignment}/>
         </div>
     )
 }

@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import styled, { keyframes } from 'styled-components'
 import CurrencyDis from '../../Constants/CurrencyConv'
+import Dragon from '../../Assets/questionDragon'
 
 //Styles
 const WeaponCard = styled.div`
@@ -58,7 +59,7 @@ function conversionDieNum(props) {
   return Function(`'use strict'; return (${props.weaponData.conversionNumOfDie}${props.brand.dieNumMod})`)()
 }
 
-//The net has a save DC to modify when Echroel. The string needs to be split, updated save DC inserted, string conatenated, and then returned.
+//The net has a save DC to modify. The string needs to be split, updated save DC inserted, string conatenated, and then returned.
 function saveDC(props) {
   return Function(`'use strict'; return (${props.weaponData.saveDC}${props.brand.saveDC})`)()
 }
@@ -74,7 +75,7 @@ function saveDC(props) {
             {brand ? 
             <WeaponBrand>
             <p>{brand.name}</p>
-
+            <Dragon width={35} height={35}/>
 {/* 
 Kindred = Roll on the brand table again, anything but Kindred. Do not display the name, but pull the modifiers except price which should remain as Kindred. */}
 
@@ -83,7 +84,9 @@ Kindred = Roll on the brand table again, anything but Kindred. Do not display th
             : ''}
             <WeaponBody>
                 <p>{weaponData.size} {weaponData.proficiency} {weaponData.type}</p>
-                {weaponData.damage ? <p>Damage: {weaponData.damage} {weaponData.damageType}</p> : <p>Damage: {dieNum(props)}d{dieSize(props)} {weaponData.damageType}</p>}
+                {weaponData.name === 'Net' || weaponData.name === 'Blowgun' ? 
+                <p>Damage: {weaponData.damage} {weaponData.damageType}</p> 
+                : <p>Damage: {dieNum(props)}d{dieSize(props)} {weaponData.damageType}</p>}
                 {weaponData.conversionNumOfDie ? 
                 <p>{weaponData.conversion} {conversionDieNum(props)}d{conversionDieSize(props)} {weaponData.damageType} </p>
                 : ''}

@@ -1,0 +1,22 @@
+export default [
+    'stand',
+    'shop',
+    'store',
+    'cart',
+    'caravan',
+    'stall',
+    'tent',
+    'market',
+    'collective',
+    'palace',
+    'garden',
+    'square',
+    'castle',
+    'courtyard',
+    'court',
+    'retreat',
+    'hoard',
+    'stash',
+    'ship',
+    'club'
+]

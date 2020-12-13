@@ -3,9 +3,13 @@ import GoldCoin from '../Assets/Goldencoin'
 import PlatCoin from '../Assets/platinumCoin'
 import SilvCoin from '../Assets/Silvercoin'
 import CopCoin from '../Assets/bronzecoin'
+import Dragon from '../Assets/questionDragon'
 import styled from 'styled-components'
 
 //Styles
+const CoinWrapper = styled.div`
+    display: ${pr => pr.theme.display.disCol};
+`
 const CoinDisplay = styled.div`
     display: ${pr => pr.theme.display.disFlex};
     justify-content: space-around;
@@ -22,7 +26,7 @@ let gold = 0
 let silver = 0
 let copper = 0
 
-//Divides price by breakpoints and assigns value to individual const
+//Calculates all cost modifiers and divides total by breakpoints
 let conversion  = (price) => {
 
 function x() {
@@ -52,6 +56,8 @@ copper = x() % silvDiv
 conversion(price)
 
     return (
+        <CoinWrapper>
+         <Dragon width={35} height={35} alt='stylistic dragon'/>
             <CoinDisplay>
                 <PlatCoin width={25} height={25} alt='platinum coin' />
                 <p>{plat}</p>
@@ -59,8 +65,9 @@ conversion(price)
                 <p>{gold}</p>
                 <SilvCoin width={25} height={25} alt='silver coin' />
                 <p>{silver}</p>
-                <CopCoin width={25} height={25} alt='golden coin' />
+                <CopCoin width={25} height={25} alt='copper coin' />
                 <p>{copper}</p>
             </CoinDisplay>
+        </CoinWrapper>
     )
 }

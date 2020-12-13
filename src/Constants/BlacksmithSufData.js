@@ -1,0 +1,21 @@
+export default [
+    'Chain',
+    'Shelf',
+    'Nail',
+    'Ingots',
+    'Metals',
+    'Brick',
+    'Iron',
+    'Grip',
+    'Ferrier',
+    'Steel',
+    'Sledgehammers',
+    'Files',
+    'Knives',
+    'Nippers',
+    'Flame',
+    'Fences',
+    'Grates',
+    'Calipers',
+    'Welding'
+]

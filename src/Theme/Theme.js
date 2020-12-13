@@ -8,6 +8,10 @@ export default {
         flexwrap: 'wrap',
         space: 'space-around',
     },
+    
+    align: {
+        base: 'baseline',
+    },
 
     colors: {
         primary: '#de9391',

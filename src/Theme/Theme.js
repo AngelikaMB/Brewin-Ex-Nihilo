@@ -1,26 +1,26 @@
 export default {
     display: {
         disFlex: 'flex',
-        flexdirection: 'column',
-        justifycontent: 'center',
-        aligncontent: 'center',
+        disInlineFlex: 'inline-flex',
+        flexCol: 'column',
+        flexRow: 'row',
+        center: 'center',
         flexwrap: 'wrap',
+        space: 'space-around',
     },
-
 
     colors: {
-        textColor: '#de9391',
-        backgroundColor: '#28343D',
-        borderColor: '#a4bbc8',
-        buttonColor: '#455b71',
-        primaryColor: '#fcd1b5',
-        secondaryColor: '#96759a',
+        primary: '#de9391',
+        background: '#28343D',
+        border: '#a4bbc8',
+        button: '#455b71',
+        text: '#fcd1b5',
+        secondary: '#96759a',
     },
-
 
     text: {
         size: {
-            DesktopAvg: '2rem',
+            DesktopAvg: '1.2rem',
             DesktopLrg: '3rem',
             DesktopSml: '1.3rem',
         },
@@ -30,11 +30,15 @@ export default {
             normal: '500',
             thin: '200'
         },
+    },
 
+    width: {
+        DesktopCards: '20%',
     },
 
 
      padding: {
+         none: '0',
          small: '5%',
      },
 
@@ -43,6 +47,12 @@ export default {
          small: '3%',
      },
 
+    border: {
+        size: '4px',
+        style: 'double',
+        circular: '50%',
+        rounded: '15px',
+    },
 
           breakpoints: {
          mobile: '(max-width: 550px)'

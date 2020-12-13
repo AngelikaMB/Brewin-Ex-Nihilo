@@ -11,13 +11,18 @@
   "author": "Angelika Blackburn",
   "license": "MIT",
   "dependencies": {
+    "@svgr/parcel-plugin-svgr": "^5.4.0",
     "axios": "^0.20.0",
+    "babel": "^6.23.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.2.0",
-    "styled-components": "^5.2.0"
+    "styled-components": "^5.2.0",
+    "yup": "^0.29.3"
   },
   "devDependencies": {
-    "parcel-bundler": "^1.12.4"
+    "babel-plugin-inline-react-svg": "^1.1.1",
+    "parcel-bundler": "^1.12.4",
+    "typescript": "^4.0.3"
   }
 }

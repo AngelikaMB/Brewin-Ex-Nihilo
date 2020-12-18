@@ -12,7 +12,7 @@ export default [
     'illustrious',
     'notorious',
     'frolicking',
-    'storng',
+    'strong',
     'lawful',
     'obedient',
     'loyal',

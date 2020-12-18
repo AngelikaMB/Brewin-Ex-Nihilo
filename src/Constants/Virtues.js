@@ -14,7 +14,7 @@ export default [
     'frolicking',
     'strong',
     'lawful',
-    'obedient',
+    'obedient?',
     'loyal',
     'bright',
     'clever',
